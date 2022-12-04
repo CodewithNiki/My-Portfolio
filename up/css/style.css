@@ -41,6 +41,7 @@ html {
 body {
   background-color: var(--color-tertiary);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a:link,
@@ -245,6 +246,10 @@ a:visited {
   border-radius: 1.5rem;
   margin-top: 2rem;
   background: transparent;
+}
+
+.home__page--text__links:hover, .home__page--text__links:visited {
+  background-color: var(--color-primary);
 }
 
 @media screen and (max-width: 800px) {

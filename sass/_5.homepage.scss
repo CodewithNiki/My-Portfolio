@@ -36,6 +36,11 @@
             margin-top: 2rem;
             background: transparent;
         }
+
+        &__links:hover,
+        &__links:visited{
+            background-color: var(--color-primary);
+        }
     }
     @include media-tablet{
         &--img{
