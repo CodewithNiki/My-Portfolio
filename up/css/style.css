@@ -1,21 +1,24 @@
 ::selection {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
-.home__page, .about, .skills {
+.home__page, .about, .skills, .contact {
   padding: 6vh 4vw;
 }
 
-.about--header, .skills--header {
+.about--header, .skills--header, .contact__heading {
   font-size: calc(1.5rem + 0.5vw);
   font-weight: font-weight(font-weight-medium);
   letter-spacing: 0.2rem;
 }
 
-.about--para, .skills--para {
+.home__page--text__para, .about--para, .skills--para, .contact__para {
   font-size: calc(1rem + 0.5vw);
   color: var(--color-primary);
   letter-spacing: 0.1rem;
+  line-height: 1.7;
+  margin: 4vh 0;
+  color: beige;
 }
 
 *,
@@ -221,7 +224,7 @@ a:visited {
 }
 
 .home__page--text__para {
-  font-size: calc(1.2rem + 0.5vw);
+  margin: 0 !important;
 }
 
 .home__page--text__header {
@@ -314,12 +317,6 @@ a:visited {
   bottom: 0;
 }
 
-.about--para {
-  line-height: 1.5;
-  margin: 4vh 0;
-  color: beige;
-}
-
 .about--display {
   color: var(--color-secondary);
   cursor: pointer;
@@ -393,12 +390,6 @@ a:visited {
   bottom: 0;
 }
 
-.skills--para {
-  line-height: 1.5;
-  margin: 4vh 0;
-  color: beige;
-}
-
 .skills--skill {
   display: grid;
   grid-template-columns: repeat(2, max-content);
@@ -413,4 +404,124 @@ a:visited {
 .skills span {
   font-size: calc(1rem + 1vw);
   margin-left: 2rem;
+}
+
+.contact {
+  height: 100vh;
+  color: var(--color-primary);
+}
+
+.contact__heading {
+  text-align: center;
+  padding: 1rem;
+  width: calc(15rem + 5vw);
+  position: relative;
+}
+
+.contact__heading::before, .contact__heading::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0.2rem;
+  background-color: var(--color-secondary);
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__heading::after {
+  left: 0;
+  top: 0;
+}
+
+.contact__heading::before {
+  right: 0;
+  bottom: 0;
+}
+
+.contact__heading:hover::before, .contact__heading:hover::after, .contact__heading:active::before, .contact__heading:active::after {
+  width: 100%;
+  height: 0.2rem;
+}
+
+.contact__heading:hover::before, .contact__heading:active::before {
+  bottom: 0;
+}
+
+.contact__form {
+  display: grid;
+  grid-template-rows: repeat(auto, min-content);
+  grid-row-gap: 4vw;
+}
+
+.contact__form--controls {
+  font-size: calc(1.5rem + 0.5vw);
+  position: relative;
+  color: beige;
+}
+
+.contact__form--controls label {
+  position: absolute;
+  top: 2rem;
+  z-index: -1;
+}
+
+.contact__form--controls label span {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  min-width: 0.5rem;
+}
+
+.contact__form--controls input {
+  width: 100%;
+  height: 5rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid beige;
+  cursor: pointer;
+  display: block;
+  font-size: calc(1.5rem + 0.5vw);
+  color: var(--color-secondary);
+}
+
+.contact__form--controls input:focus,
+.contact__form--controls input:valid {
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.contact__form--controls input:focus + label span,
+.contact__form--controls input:valid + label span {
+  transform: translateY(-3rem);
+  color: var(--color-secondary);
+}
+
+.contact__form--controls:nth-child(3) textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 0.2rem solid var(--color-secondary);
+  font-size: calc(1.5rem + 0.5vw);
+  color: var(--color-secondary);
+  margin-top: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.contact__form--controls:nth-child(3) label {
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  margin-top: 1rem;
+}
+
+.contact__form--link:link, .contact__form--link:visited {
+  color: beige;
+  border: 0.2rem solid;
+  width: calc(15rem + 2vw);
+  text-align: center;
+}
+
+.contact__form--link:hover, .contact__form--link:active {
+  color: var(--color-secondary);
+  background-color: black;
 }

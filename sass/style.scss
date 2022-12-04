@@ -28,7 +28,7 @@
   // *-*-*-*-*-*--*-*-*-*-*-*-*-*---------------------------------*-*-*-*-*-*-*--*-*-*--*-*-*-*-*-*-*-*
   
   ::selection {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
   }
   
   // *-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Placeholder Styles *-*-*-*-*-*-*-*-*-*-*-*-*
@@ -63,6 +63,9 @@
     font-size: calc(1rem + 0.5vw);
     color: var(--color-primary);
     letter-spacing: 0.1rem;
+    line-height: 1.7;
+    margin: 4vh 0;
+    color:beige;
   }
 
 @import "1.reset";
@@ -72,3 +75,5 @@
 @import "5.homepage";
 @import "6.about";
 @import "7.skills";
+@import "8.projects";
+@import "9.contacts";

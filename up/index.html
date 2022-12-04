@@ -18,8 +18,8 @@
         <div class="header__nav--links">
           <a href="#about" class="header__nav--links__link">About</a>
           <a href="#skills" class="header__nav--links__link">Skills</a>
-          <a href="" class="header__nav--links__link">Projects</a>
-          <a href="" class="header__nav--links__link">Contact</a>
+          <a href="#projects" class="header__nav--links__link">Projects</a>
+          <a href="#contact" class="header__nav--links__link">Contact</a>
         </div>
       </nav>
 
@@ -54,8 +54,8 @@
         course during my undergraduate studies. i love blending the art of
         design with skill of programming to deliver an immersive and engaging
         user experience through efficient website development, proactive feature
-        optimization, relentless debugging and testing. I enjoy creativity, playing
-        music, working-out and getting things done.
+        optimization, relentless debugging and testing. I enjoy creativity,
+        playing music, working-out and getting things done.
       </p>
       <span class="about--display">Read more</span>
       <p class="about--para none">
@@ -92,10 +92,41 @@
     <section class="projects" id="projects">
       <h3 class="projects__heading">Some Projects I've done</h3>
 
-      <div class="projects__project--1"></div>
-      <div class="projects__project--2"></div>
-      <div class="projects__project--3"></div>
-      <div class="projects__project--4"></div>
+      <div class="projects__project">
+        <div class="projects__project--heading">Quiz App</div>
+        <div class="projects__project--heading">Todo App</div>
+      </div>
+      <div class="projects__project">
+        <div class="projects__project--heading">Movies Search App</div>
+      </div>
+      <div class="projects__project">Budget App</div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h3 class="contact__heading">Get In Touch</h3>
+      <p class="contact__para">
+        Whether you have a proposal, question or just want to say hello, my
+        inbox is always open.
+      </p>
+      <div class="contact__form">
+        <div class="contact__form--controls">
+          <input class="contact__form--controls__input" type="text" required />
+          <label for="Name">Your Name</label>
+        </div>
+
+        <div class="contact__form--controls">
+          <input class="contact__form--controls__input" type="Email" required />
+          <label for="Email">Email</label>
+        </div>
+
+        <div class="contact__form--controls">
+          <textarea name="message" cols="30" rows="5" class="contact__form--controls__input"></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <a href="" class="contact__form--link">Send <span>&#8594</span></a>
+      </div>
+
     </section>
   </body>
   <script src="script.js"></script>

@@ -27,3 +27,17 @@ for(let i = 0; i < seeMore.length; i++){
         seeMore[0].classList.remove("none");
     })
 }
+
+// contact section
+const labels = document.querySelectorAll(".contact__form--controls label");
+// console.log(label);
+
+labels.forEach((label) =>{
+    label.innerHTML = label.innerText.split("")
+    .map((letter, index) => `<span style = "transition-delay: ${index * 50}ms">${letter}</span>`)
+    .join("");
+});
+
+// labels.forEach((label)=>{
+//     label.innerHTML =
+// });

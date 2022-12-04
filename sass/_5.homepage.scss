@@ -10,7 +10,8 @@
         grid-template-rows: repeat(auto, max-content);
         grid-row-gap: 1vh;
         &__para{
-            font-size: font-size(font-size-small);
+            @extend %sec-para;
+            margin: 0 !important;
         }
     
         &__header{
